@@ -15,7 +15,14 @@ app.get("/bye", function(req, res) {
 app.get("/dog", function(req, res) {
 	console.log("Someone is making a request to /dog");
 	res.send("MEOW!");
-})
+});
+
+
+// Page not found route 
+// "*" route is used for when user request any urls that are not defined
+app.get("*", function(req, res) {
+	res.send("You are a Star!!");
+});
 
 
 // Tell Express to listen for requests (start server)
