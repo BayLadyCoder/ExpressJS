@@ -18,8 +18,23 @@ app.get("/dog", function(req, res) {
 });
 
 
+// Route Parameters using :
+app.get("/r/:subredditName", function(req, res) {
+	console.log(req.params);
+	var subreddit = req.params.subredditName;
+	res.send("Welcome to the " + subreddit + " Subreddit");
+});
+
+app.get("/r/:subredditName/comments/:id/:title", function(req, res) {
+	console.log(req.params);
+	res.send("Welcome to the comments page!")
+});
+
+
 // Page not found route 
 // "*" route is used for when user request any urls that are not defined
+// According to route order, the * should be the last route in the  order,
+// So that it will search for all the defined routes before it goes to * 
 app.get("*", function(req, res) {
 	res.send("You are a Star!!");
 });
