@@ -19,7 +19,6 @@ app.get("/speak/:animal", function(req, res) {
 	// 	res.send("The " + animal + " says 'MEEEEOOOOWWWW'");
 	// }
 
-
 	// Another way to do it using js object
 	var sounds = {
 		pig: "Oink",
@@ -27,10 +26,9 @@ app.get("/speak/:animal", function(req, res) {
 		dog: "Woof Woof!",
 		cat: "MEEEEOOOOWWWW",
 		goldfish: "..."
-	}
+	};
 
 	var sound = sounds[animal];
-
 	res.send("The " + animal + " says \'" + sound + "\'");
 
 	
