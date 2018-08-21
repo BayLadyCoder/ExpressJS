@@ -18,12 +18,22 @@ app.get("/speak/:animal", function(req, res) {
 	} else {
 		res.send("The " + animal + " says 'MEEEEOOOOWWWW'");
 	}
-
 	
 });
 
-app.get("/", function(req, res) {
-	res.send("");
+
+app.get("/repeat/:word/:number", function(req, res) {
+	var word = req.params.word;
+	var numberString = req.params.number;
+	var number = Number(numberString);
+	var stringText = "";
+
+	for (var i = 1 ; i < number+1 ; i++) {
+		stringText += i + " " + word + " ";
+	}
+
+	res.send(stringText);
+	stringText = "";
 });
 
 app.get("*", function(req, res) {
