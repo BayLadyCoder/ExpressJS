@@ -1,0 +1,14 @@
+{
+  "name": "express-routing-exercise",
+  "version": "1.0.0",
+  "description": "Express Routing Exercise - Basic Express.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BayLadyCoder",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
